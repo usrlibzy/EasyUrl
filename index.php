@@ -6,10 +6,12 @@ copyright 2017 (By Twikor)
 
 //*** CONFIG GOES BELOW!
 
-//*Where are ye to go?
+//** Where are ye to go?
+
 $tar_base_url = "http://twic.me";
 
-//*Which room are ye to be in?
+//** Which room are ye to be in?
+
 $redi_pairs = array(
   '/' => '/',
   '/work/' => '/work',
@@ -20,8 +22,13 @@ $redi_pairs = array(
   '/work/utility/' => '/work/utility',
   '/work/research/' => '/work/research',
   '/work/experiment/' => '/work/experiment',
-  '/error/' => 'http://twic.me/error',
-  '' => '',
+  
+//** Have somewhere outside,see the beauty of the world!
+  
+  '/google/' => 'https://google.com',
+  
+//** Add more as you like!
+  
   '' => '',
   '' => '',
   '' => '',
