@@ -33,7 +33,7 @@ $redi_pairs = array(
   '' => ''
 );
 
-//*** START IT'S WORK!
+//*** START ITS WORK!
 $cur_uri = $_SERVER['PATH_INFO'];
 $cur_uri_step = explode('/',$cur_uri);
 echo "Current uri: ".$cur_uri."<br/>";
