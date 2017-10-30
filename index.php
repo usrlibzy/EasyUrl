@@ -1,6 +1,6 @@
 <?php
 /*
-------url-redirector file------
+------EasyUrl file------
 copyright 2017 (By Twikor)
 */
 
