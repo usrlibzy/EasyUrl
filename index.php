@@ -4,12 +4,12 @@
 copyright 2017 (By Twikor)
 */
 
-//*** CONFIGS GOES BELOW!
+//*** CONFIGs GO BELOW!
 
-//*Where you are to go?
+//*Where are ye to go?
 $tar_base_url = "http://twic.me";
 
-//*Which room you are to be in?
+//*Which room are ye to be in?
 $redi_pairs = array(
   '/work/' => '/work',
   '/life/' => '/life',
