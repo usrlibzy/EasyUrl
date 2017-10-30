@@ -1,0 +1,8 @@
+##
+##------url-redirector file------
+##copyright 2017 (By twikor)
+##
+
+RewriteEngine on
+# make index.php links work
+RewriteRule ^([a-zA-Z0-9/]*)$ index.php/$1
