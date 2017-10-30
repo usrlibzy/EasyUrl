@@ -4,13 +4,14 @@
 copyright 2017 (By Twikor)
 */
 
-//*** CONFIGs GO BELOW!
+//*** CONFIG GOES BELOW!
 
 //*Where are ye to go?
 $tar_base_url = "http://twic.me";
 
 //*Which room are ye to be in?
 $redi_pairs = array(
+  '/' => '/',
   '/work/' => '/work',
   '/life/' => '/life',
   '/about/' => '/about',
@@ -19,8 +20,7 @@ $redi_pairs = array(
   '/work/utility/' => '/work/utility',
   '/work/research/' => '/work/research',
   '/work/experiment/' => '/work/experiment',
-  '' => '',
-  '' => '',
+  '/error/' => 'http://twic.me/error',
   '' => '',
   '' => '',
   '' => '',
@@ -35,6 +35,7 @@ $redi_pairs = array(
 
 //*** START IT'S WORK!
 $cur_uri = $_SERVER['PATH_INFO'];
+$cur_uri_step = explode('/',$cur_uri);
 echo "Current uri: ".$cur_uri."<br/>";
 if (substr($cur_uri,-1) != "/")
 {
@@ -43,8 +44,16 @@ if (substr($cur_uri,-1) != "/")
 if (isset($redi_pairs[$cur_uri]))
 {
   header('HTTP/1.1 301 Moved Permanently');
-  header('Location: '.$tar_base_url.$redi_pairs[$cur_uri]);
-  echo "Action: 301 to ".$tar_base_url.$redi_pairs[$cur_uri];
+  if (preg_match('/^^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+$/',$redi_pairs[$cur_uri]))
+  {
+    header('Location: '.$redi_pairs[$cur_uri]);
+    echo "Action: 301 to ".$redi_pairs[$cur_uri];
+  }
+  else
+  {
+    header('Location: '.$tar_base_url.$redi_pairs[$cur_uri]);
+    echo "Action: 301 to ".$tar_base_url.$redi_pairs[$cur_uri];
+  }
 }
 else
 {
