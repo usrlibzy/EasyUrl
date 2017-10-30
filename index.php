@@ -29,15 +29,10 @@ $redi_pairs = array(
   
 //** Add more as you like!
   
-  '' => '',
-  '' => '',
-  '' => '',
-  '' => '',
-  '' => '',
-  '' => '',
-  '' => '',
-  '' => '',
-  '' => ''
+  '/one/' => '/article-1/',
+  '/two/' => '/article-2/',
+  '/wikileaks/' => 'http://wikileaks.org',
+  '/wikipedia/' => 'http://wikipedia.org'
 );
 
 //*** START ITS WORK!
